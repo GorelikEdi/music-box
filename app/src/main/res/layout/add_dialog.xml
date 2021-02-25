@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/song_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_light"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorAccent"
+        android:gravity="center_horizontal"
+        android:hint="Song name"/>
+
+    <EditText
+        android:id="@+id/singer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_light"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorAccent"
+        android:gravity="center_horizontal"
+        android:hint="Singer"
+        android:layout_below="@+id/song_name"/>
+
+    <EditText
+        android:id="@+id/link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_light"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorAccent"
+        android:gravity="center_horizontal"
+        android:hint="* Song URL"
+        android:layout_below="@+id/singer"/>
+
+    <EditText
+        android:id="@+id/position"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_light"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorAccent"
+        android:gravity="center_horizontal"
+        android:hint="Position (1 - 999....)"
+        android:layout_below="@+id/link"/>
+
+    <LinearLayout
+        android:id="@+id/image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/position"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_bold"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            android:text="Song image"/>
+
+        <ImageButton
+            android:id="@+id/songImageCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:src="@android:drawable/ic_menu_camera" />
+
+        <ImageButton
+            android:id="@+id/songImageGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:src="@android:drawable/ic_menu_gallery" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/comfortaa_bold"
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="10dp"
+        android:text="* - required"
+        android:id="@+id/required_text"
+        android:layout_below="@+id/image_layout"/>
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@color/colorPrimary"
+    app:contentPadding="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="1dp">
+
+    <ImageView
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingStart="10dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/ic_launcher_round"
+            android:id="@+id/songImage"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/songImage"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:text="Song"
+                android:fontFamily="@font/comfortaa_light"
+                android:textColor="@color/colorPrimaryDark"
+                android:id="@+id/songName"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="Singer"
+                android:fontFamily="@font/comfortaa_bold"
+                android:id="@+id/singer"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="wave.json"
+            android:visibility="invisible"
+            app:lottie_loop="true"
+            android:id="@+id/nowPlaying"
+            android:paddingEnd="5dp"
+            android:paddingBottom="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
